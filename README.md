@@ -1,5 +1,5 @@
 # googleTest
 
 Для компиляции нужен ninja-build 
-apt-get install ninja-build
+"sudo apt-get install ninja-build" 
 ./compile.sh
