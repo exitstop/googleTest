@@ -2,7 +2,7 @@
 
 #define DBG(v) copy(v.begin(), v.end(), ostream_iterator<typeof(*v.begin())>(cout, " "))
 
-bool myCopyIf(std::vector<uint32_t> &v)
+void myCopyIf(std::vector<uint32_t> &v)
 {
     using namespace std;
 

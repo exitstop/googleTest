@@ -9,4 +9,4 @@
 #include <cstdint>
 
 
-bool myCopyIf(std::vector<uint32_t> &v);
+void myCopyIf(std::vector<uint32_t> &v);
