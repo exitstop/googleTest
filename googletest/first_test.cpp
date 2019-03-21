@@ -14,7 +14,7 @@ TEST(main, test0)
 {
     using namespace std;
     {
-        // Проверка корректности выполнения
+        // Проверка корректности выполнения 
         vector<uint32_t> v0{0,1,0,2,0,6,9,0,4,5,4,6,6,0};
 
         size_t sumStart = accumulate(v0.begin(), v0.end(), 1, [](int x, int y){ return x + y;} );
