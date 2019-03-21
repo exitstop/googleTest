@@ -9,8 +9,7 @@ void myCopyIf(std::vector<uint32_t> &v)
     uint32_t count = 0;
     copy_if(v.begin(), v.end(), v.begin(), [&count](uint32_t i)
                 {
-                    if( i != 0 ) 
-                    {
+                    if( i != 0 ) {
                         count++;
                         return true;
                     }
