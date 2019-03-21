@@ -4,10 +4,10 @@ include_directories(
     .
     )
 
+file(GLOB MY_COPYIF_SRC "my_copyif.*")
 
 add_library(my_copyif
-    my_copyif.h
-    my_copyif.cpp
+    "${MY_COPYIF_SRC}"
     )
 
 add_executable(main
