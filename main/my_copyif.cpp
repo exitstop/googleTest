@@ -7,7 +7,7 @@ void myCopyIf(std::vector<uint32_t> &v)
     using namespace std;
 
     uint32_t count = 0;
-    std::copy_if(v.begin(), v.end(), v.begin(), [&count](uint32_t i)
+    copy_if(v.begin(), v.end(), v.begin(), [&count](uint32_t i)
                 {
                     if( i != 0 ) 
                     {
@@ -17,7 +17,7 @@ void myCopyIf(std::vector<uint32_t> &v)
                     return false;
                 }
             );
-    std::fill(v.begin() + count, v.end(), 0);
+    fill(v.begin() + count, v.end(), 0);
     DBG(v); 
     cout << endl;
 }
