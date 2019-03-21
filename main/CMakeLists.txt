@@ -4,6 +4,7 @@ include_directories(
     .
     )
 
+# anti pattern cmake
 file(GLOB MY_COPYIF_SRC "my_copyif.*")
 
 add_library(my_copyif
