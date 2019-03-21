@@ -2,6 +2,9 @@
 
 #define DBG(v) copy(v.begin(), v.end(), ostream_iterator<typeof(*v.begin())>(cout, " "))
 
+
+// функция смещает все числа == 0 в конец массива, а все числа != 0 в начало    
+// и не изменяет их порядок
 void myCopyIf(std::vector<uint32_t> &v)
 {
     using namespace std;
