@@ -1,5 +1,10 @@
 #include "my_copyif.h"
 
+#include <iostream>
+#include <iterator>
+#include <typeinfo>
+#include <algorithm>
+
 #define DBG(v) copy(v.begin(), v.end(), ostream_iterator<typeof(*v.begin())>(cout, " "))
 
 
