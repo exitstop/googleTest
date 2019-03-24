@@ -1,12 +1,11 @@
-#include "my_copyif.h"
+#include "my_copyif.hpp"
 
 #include <iostream>
 #include <iterator>
-#include <typeinfo>
 #include <algorithm>
+#include <typeinfo>
 
-#define DBG(v) copy(v.begin(), v.end(), ostream_iterator<typeof(*v.begin())>(cout, " "))
-
+#define DBG(v) copy((v).begin(), (v).end(), ostream_iterator<decltype(*(v).begin())>(cout, " "))
 
 // функция смещает все числа == 0 в конец массива, а все числа != 0 в начало    
 // и не изменяет их порядок

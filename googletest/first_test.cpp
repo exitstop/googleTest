@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-#include "my_copyif.h"
+#include "my_copyif.hpp"
 
 #include <iostream>
 #include <numeric>

@@ -1,7 +1,6 @@
-#include <vector>
-#include "my_copyif.h"
+#include "my_copyif.hpp"
 
-#define DBG(v) copy(v.begin(), v.end(), ostream_iterator<typeof(*v.begin())>(cout, " "))
+#define DBG(v) copy((v).begin(), (v).end(), ostream_iterator<typeof(*(v).begin())>(cout, " "))
 
 int main()
 {

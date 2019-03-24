@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 3.8.0 FATAL_ERROR)
 
 add_library(my_copyif
     #"${MY_COPYIF_SRC}" # anti pattern cmake
-    my_copyif.h
+    my_copyif.hpp
     my_copyif.cpp
     )
 
