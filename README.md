@@ -5,7 +5,7 @@
 1. sudo apt-get install ninja-build
 2. ./compile.sh
 
-#Для запуска тестов
+# Для запуска тестов
 ninja test
 1. test0 OK
 2. test1 Fail
