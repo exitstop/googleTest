@@ -6,8 +6,6 @@ message(STATUS ${GTEST_ROOT})
 message(STATUS ${GTEST_INCLUDE_DIR})
 message(STATUS ${OPENSSL_ROOT_DIR})
 
-enable_testing()
-
 add_executable(mytest
         gtest_main.cc
         gtest-all.cc
@@ -27,3 +25,6 @@ target_link_libraries(mytest
     ${CMAKE_THREAD_LIBS_INIT}
     my_copyif
     )
+
+add_test(test0 "mytest" "--gtest_filter=main.test0" mytest)
+add_test(test1 "mytest" "--gtest_filter=main.test1" mytest)

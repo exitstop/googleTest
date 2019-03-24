@@ -42,3 +42,9 @@ TEST(main, test0)
         ASSERT_TRUE(sumStart == sumEnd);
     }
 }
+
+
+TEST(main, test1)
+{
+    ASSERT_TRUE(false);
+}
