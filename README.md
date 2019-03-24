@@ -1,8 +1,9 @@
 # googleTest
 
-Для компиляции нужен ninja-build 
-"sudo apt-get install ninja-build" 
-./compile.sh
+Для компиляции нужен ninja-build
+
+1. sudo apt-get install ninja-build
+2. ./compile.sh
 
 #Для запуска тестов
 ninja test
