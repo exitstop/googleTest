@@ -1,7 +1,9 @@
 #include "gtest/gtest.h"
 
-#include <iostream>
 #include "my_copyif.h"
+
+#include <iostream>
+#include <numeric>
 
 #define DBG(v) copy(v.begin(), v.end(), ostream_iterator<typeof(*v.begin())>(cout, " "))
 
