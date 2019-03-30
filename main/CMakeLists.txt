@@ -6,7 +6,8 @@ cmake_minimum_required(VERSION 3.8.0 FATAL_ERROR)
 # anti pattern cmake
 #file(GLOB MY_COPYIF_SRC "my_copyif.*")
 
-add_library(my_copyif
+# STATIC | SHARED
+add_library(my_copyif STATIC
     #"${MY_COPYIF_SRC}" # anti pattern cmake
     my_copyif.hpp
     my_copyif.cpp
