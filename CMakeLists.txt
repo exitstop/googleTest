@@ -1,5 +1,8 @@
 cmake_minimum_required (VERSION 3.9.0)
 
+set(This Example)
+project(${This} CXX)
+
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
