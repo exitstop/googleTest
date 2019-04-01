@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 3.8.0 FATAL_ERROR)
 # anti pattern cmake
 #file(GLOB MY_COPYIF_SRC "my_copyif.*")
 
+add_subdirectory(yandex_tasks)
+
 # STATIC | SHARED
 add_library(my_copyif STATIC
     #"${MY_COPYIF_SRC}" # anti pattern cmake
@@ -25,4 +27,5 @@ target_include_directories(main PRIVATE
 
 target_link_libraries(main
     my_copyif
+    ya0
     )
