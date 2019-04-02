@@ -3,10 +3,14 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <codecvt>
+#include <locale>
 
 using std::cout;
+using std::wcout;
 using std::endl;
 using std::string;
+using std::wstring;
 
 void func0()
 {
@@ -21,18 +25,43 @@ void func0()
 
 void func1()
 {
-    std::ofstream outFile;
-    std::ifstream inFile;
+    //setlocale(LC_ALL, "Russian");
+    std::locale::global(std::locale(""));
 
-    inFile.open("in.txt", std::ifstream::in);
+    // запись в файл
+    std::wofstream outFile;
+
+    //S{L"камни"}, J{L"драгоценности"};
+    wstring S, J;
+
+    std::wifstream inFile;
+
+    inFile.open("in.txt", std::wofstream::in);
 
     if(inFile.is_open()) {
-        string J, S;
-        std::getline(inFile, S);
-        std::getline(inFile, J);
-        cout << "line : " << S << endl;
-        cout << "line : " << J << endl;
+        //std::getline(inFile, S);
+        inFile >> J;
+        inFile >> S;
+
+        std::wstring_convert<std::codecvt_utf8<wchar_t>> utf8_conv;
+        cout << "line: " << utf8_conv.to_bytes(S) << endl;
+        cout << "line: " << utf8_conv.to_bytes(J) << endl;
+
+        size_t count = 0;
+        for(const auto ch: S) {
+            count += ( J.find(ch) != wstring::npos );
+            //cout << "line: " << utf8_conv.to_bytes(ch) << " count: " << J.(ch) << endl;
+        }
+        cout << "count: " << count << endl;
+        inFile.close();
+
+        outFile.open("out.txt", std::wofstream::out);
+        if(outFile.is_open()) {
+            outFile << count << endl;
+            outFile.close();
+        }
     } else {
         cout << "file in.txt not open" << endl;
     }
+
 }
