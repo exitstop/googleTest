@@ -23,7 +23,9 @@ set(SOIL_MY_COPYIF_LIBRARY_PATH ${binary_dir}/main/libmy_copyif.a)
 file(MAKE_DIRECTORY ${SOIL_INCLUDE_DIRS})
 file(MAKE_DIRECTORY ${binary_dir}/main)
 # Если не создать этот файл заглушку, то не соберется ничего
-file(WRITE ${SOIL_MY_COPYIF_LIBRARY_PATH} "empty")
+if(NOT EXISTS "${SOIL_MY_COPYIF_LIBRARY_PATH}")
+    file(WRITE ${SOIL_MY_COPYIF_LIBRARY_PATH} "empty")
+endif()
 
 set(MY_SOIL my_soil)
 add_library(${MY_SOIL} UNKNOWN IMPORTED)
